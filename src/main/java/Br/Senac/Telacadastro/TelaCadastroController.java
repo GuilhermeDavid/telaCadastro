@@ -47,6 +47,8 @@ public class TelaCadastroController implements Initializable {
     private DatePicker dpNascimento;
     @FXML
     private ComboBox comboGenero;
+    @FXML
+    private TextField outrogenero;
     
     private String nome = "";
     private String sobrenome = "";
@@ -61,6 +63,7 @@ public class TelaCadastroController implements Initializable {
     private boolean contatocel = false;
     private boolean contatotelfixo = false;
     private boolean contatoemail = false;
+    private String generoEscolha = "";
     
     
     @Override
@@ -94,6 +97,7 @@ public class TelaCadastroController implements Initializable {
         cbCel.setSelected(false);
         cbTelFixo.setSelected(false);
         cbEmail.setSelected(false);
+        outrogenero.clear();
     }
     
     @FXML
@@ -136,7 +140,10 @@ public class TelaCadastroController implements Initializable {
         }
         if (contatotelfixo == true) {
             cbTelFixo.setSelected(contatotelfixo);
-        } 
+        }
+        if(!generoEscolha.equals("")){
+            outrogenero.setText(generoEscolha);
+        }
     }
     @FXML
     private void salvar(ActionEvent event) {
@@ -147,6 +154,7 @@ public class TelaCadastroController implements Initializable {
         rg = txtRg.getText();
         email = txtEmail.getText();
         cel = txtCel.getText();
+        generoEscolha = outrogenero.getText();
         
         nascimento = dpNascimento.getValue();
         genero = comboGenero.getSelectionModel().getSelectedIndex();
@@ -154,6 +162,7 @@ public class TelaCadastroController implements Initializable {
         contatocel = cbCel.isSelected();
         contatoemail = cbEmail.isSelected();
         contatotelfixo = cbTelFixo.isSelected();
+        
                
     }
 
@@ -183,4 +192,19 @@ public class TelaCadastroController implements Initializable {
             System.exit(0);
         }
     } 
+
+    @FXML
+    private void combo(ActionEvent event) {
+        
+        int generoOutro = comboGenero.getSelectionModel().getSelectedIndex();
+        
+        if(generoOutro == 4){
+            outrogenero.setDisable(false);
+            
+        }
+        else {
+            outrogenero.setDisable(true);
+            outrogenero.clear();
+        }
+    }
 }

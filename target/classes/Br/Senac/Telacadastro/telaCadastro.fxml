@@ -11,9 +11,9 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="377.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Br.Senac.Telacadastro.TelaCadastroController">
+<AnchorPane id="AnchorPane" prefHeight="460.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Br.Senac.Telacadastro.TelaCadastroController">
    <children>
-      <TitledPane animated="false" collapsible="false" layoutX="7.0" layoutY="156.0" prefHeight="142.0" prefWidth="699.0" text="Contato" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="13.0">
+      <TitledPane animated="false" collapsible="false" layoutX="8.0" layoutY="219.0" prefHeight="142.0" prefWidth="699.0" text="Contato" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="12.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="116.0" prefWidth="694.0">
                <children>
@@ -38,30 +38,31 @@
             </AnchorPane>
         </content>
       </TitledPane>
-      <Button layoutX="14.0" layoutY="321.0" mnemonicParsing="false" onAction="#sair" prefHeight="25.0" prefWidth="100.0" text="Sair" />
-      <Button layoutX="451.0" layoutY="321.0" mnemonicParsing="false" onAction="#limpar" prefHeight="25.0" prefWidth="73.0" text="Limpar" />
-      <Button layoutX="546.0" layoutY="321.0" mnemonicParsing="false" onAction="#carregar" prefHeight="25.0" prefWidth="73.0" text="Carregar" />
-      <Button layoutX="632.0" layoutY="321.0" mnemonicParsing="false" onAction="#salvar" prefHeight="25.0" prefWidth="73.0" text="Salvar" />
-      <TitledPane animated="false" collapsible="false" layoutX="7.0" layoutY="14.0" prefHeight="142.0" prefWidth="699.0" text="Informações Pessoais" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="13.0">
+      <Button layoutX="14.0" layoutY="409.0" mnemonicParsing="false" onAction="#sair" prefHeight="25.0" prefWidth="100.0" text="Sair" />
+      <Button layoutX="451.0" layoutY="409.0" mnemonicParsing="false" onAction="#limpar" prefHeight="25.0" prefWidth="73.0" text="Limpar" />
+      <Button layoutX="546.0" layoutY="409.0" mnemonicParsing="false" onAction="#carregar" prefHeight="25.0" prefWidth="73.0" text="Carregar" />
+      <Button layoutX="632.0" layoutY="409.0" mnemonicParsing="false" onAction="#salvar" prefHeight="25.0" prefWidth="73.0" text="Salvar" />
+      <TitledPane animated="false" collapsible="false" layoutX="8.0" layoutY="14.0" prefHeight="205.0" prefWidth="699.0" text="Informações Pessoais" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="12.0">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="135.0" prefWidth="697.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="161.0" prefWidth="697.0">
                <children>
                   <TextField fx:id="txtNome" layoutX="14.0" layoutY="22.0" prefHeight="25.0" prefWidth="200.0" promptText="Nome" />
                   <TextField fx:id="txtSobrenome" layoutX="251.0" layoutY="22.0" prefHeight="25.0" prefWidth="424.0" promptText="Sobrenome" />
-                  <TextField fx:id="txtRg" layoutX="569.0" layoutY="76.0" prefHeight="25.0" prefWidth="105.0" promptText="RG" />
-                  <TextField fx:id="txtCpf" layoutX="410.0" layoutY="76.0" prefHeight="25.0" prefWidth="107.0" promptText="CPF" />
-                  <DatePicker fx:id="dpNascimento" editable="false" layoutX="14.0" layoutY="76.0" prefHeight="25.0" prefWidth="201.0" promptText="Data de Nascimento" />
-                  <ComboBox fx:id="comboGenero" layoutX="251.0" layoutY="76.0" prefHeight="25.0" prefWidth="114.0" promptText="Gênero" />
+                  <TextField fx:id="txtRg" layoutX="482.0" layoutY="125.0" prefHeight="25.0" prefWidth="193.0" promptText="RG" />
+                  <TextField fx:id="txtCpf" layoutX="249.0" layoutY="125.0" prefHeight="25.0" prefWidth="198.0" promptText="CPF" />
+                  <DatePicker fx:id="dpNascimento" editable="false" layoutX="14.0" layoutY="125.0" prefHeight="25.0" prefWidth="201.0" promptText="Data de Nascimento" />
+                  <ComboBox fx:id="comboGenero" layoutX="12.0" layoutY="77.0" onAction="#combo" prefHeight="25.0" prefWidth="202.0" promptText="Gênero" />
                   <Label layoutX="208.0" layoutY="6.0" text="*" />
                   <Label layoutX="666.0" layoutY="6.0" text="*" />
-                  <Label layoutX="208.0" layoutY="58.0" text="*" />
-                  <Label layoutX="359.0" layoutY="58.0" text="*" />
-                  <Label layoutX="514.0" layoutY="58.0" text="*" />
-                  <Label layoutX="666.0" layoutY="58.0" text="*" />
+                  <Label layoutX="202.0" layoutY="105.0" text="*" />
+                  <Label layoutX="205.0" layoutY="59.0" text="*" />
+                  <Label layoutX="441.0" layoutY="105.0" text="*" />
+                  <Label layoutX="669.0" layoutY="105.0" text="*" />
+                  <TextField fx:id="outrogenero" disable="true" layoutX="250.0" layoutY="76.0" prefHeight="25.0" prefWidth="198.0" promptText="Genero" />
                </children>
             </AnchorPane>
          </content>
       </TitledPane>
-      <Button layoutX="133.0" layoutY="321.0" mnemonicParsing="false" onAction="#finalizarCadastro" prefHeight="25.0" prefWidth="224.0" text="Finalizar Cadastro" />
+      <Button layoutX="133.0" layoutY="409.0" mnemonicParsing="false" onAction="#finalizarCadastro" prefHeight="25.0" prefWidth="224.0" text="Finalizar Cadastro" />
    </children>
 </AnchorPane>
